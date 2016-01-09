@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="ngPaginationApp">
+    <header>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
+        
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </header>
+    <body>
+        <div class="row" ng-controller="itemsController">
+            <ul>
+                <li ng-repeat="thing in things">{{ thing.title }}</li>
+            </ul>
+            <uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" rotate="false" ng-change="pageChanged()"></uib-pagination>
+        </div>
+    </body>
+</html>
